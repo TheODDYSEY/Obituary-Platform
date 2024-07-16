@@ -1,0 +1,30 @@
+from django.contrib import sitemaps
+from django.urls import reverse
+from .models import Obituary
+
+class ObituarySitemap(sitemaps.Sitemap):
+    changefreq = "daily"
+    priority = 0.8
+
+    def items(self):
+        return Obituary.objects.all()
+
+    def lastmod(self, obj):
+        return obj.submission_date
+
+    def location(self, obj):
+        return reverse('view_obituaries')
+
+# Add the sitemap view to the project's urls.py
+from django.contrib.sitemaps.views import sitemap
+from .sitemaps import ObituarySitemap
+
+sitemaps = {
+    'obituaries': ObituarySitemap,
+}
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('', include('obituaries.urls')),
+    path('sitemap.xml', sitemap, {'sitemaps': sitemaps}, name='django.contrib.sitemaps.views.sitemap')
+]
