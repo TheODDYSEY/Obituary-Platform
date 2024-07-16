@@ -91,10 +91,10 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 Include screenshots here to visually demonstrate the functionality and design of your platform. For example:
 
 - **Homepage**
-  ![Homepage](screenshots/homepage.png)
+  ![Homepage](./homepage.png)
 
 - **Submit Obituary Form**
-  ![Submit Obituary Form](screenshots/submit_obituary.png)
+  ![Submit Obituary Form](./submit_obituary.png)
 
 - **View Obituaries Table**
-  ![View Obituaries Table](screenshots/view_obituaries.png)
+  ![View Obituaries Table](./view_obituaries.png)
