@@ -3,7 +3,7 @@ document.getElementById('obituaryForm').addEventListener('submit', function(even
     let formIsValid = true;
 
     // Custom validation logic here
-    // Example: Check if the content is at least 20 characters
+    // Check if the content is at least 20 characters
     const content = document.getElementById('content').value;
     if (content.length < 20) {
         formIsValid = false;
